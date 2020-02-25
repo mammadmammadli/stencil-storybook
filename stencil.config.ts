@@ -3,7 +3,7 @@ import { sass } from '@stencil/sass';
 import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
-  namespace: 'lib',
+  namespace: 'pashalib',
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: 'pashalib',
