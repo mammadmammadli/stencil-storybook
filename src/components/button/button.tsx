@@ -10,7 +10,7 @@ export class Button {
   render() {
     return (
       <button>
-        kill for s
+        <slot />
       </button>
     );
   }
