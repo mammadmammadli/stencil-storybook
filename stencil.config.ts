@@ -6,7 +6,7 @@ export const config: Config = {
   namespace: 'lib',
   outputTargets: [
     reactOutputTarget({
-      componentCorePackage: 'uilib-react',
+      componentCorePackage: 'pashalib',
       proxiesFile: 'dist/react/components.ts',
     }),
     {
