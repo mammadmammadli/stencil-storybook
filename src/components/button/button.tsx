@@ -2,7 +2,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'ui-button',
-  styleUrl: 'button.css',
+  styleUrl: 'button.scss',
   shadow: true
 })
 export class Button {
@@ -10,7 +10,7 @@ export class Button {
   render() {
     return (
       <button>
-        test
+        kill for s
       </button>
     );
   }
