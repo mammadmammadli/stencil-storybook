@@ -21,7 +21,7 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "publish": "node ./tools/publish.js",
-    "start": "npm-run-all --parallel serve storybook",
+    "start": "npm run build && npm-run-all --parallel serve storybook",
     "storybook": "start-storybook -p 9001 -c .storybook -s www"
   },
   "devDependencies": {
