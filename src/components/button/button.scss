@@ -1,7 +1,29 @@
-:host {
-  display: block;
+button {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  outline: 0;
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  text-align: center;
+  text-transform: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  min-width: 128px;
+  padding: 7px 16px;
+  line-height: 24px;
+  cursor: pointer;
+  transition-duration: .15s;
+
+  &:focus {
+    background-color: #099a71;
+  }
 }
 
-button {
-  background-color: red;
+.success {
+  color: #fff;
+  background-color: #058d66;
 }

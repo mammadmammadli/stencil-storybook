@@ -10,31 +10,22 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+  interface UiButton {
+    'form': string;
+    'isBlock': boolean;
+    'isDisabled': boolean;
+    'isGhost': boolean;
+    'isLoading': boolean;
+    'isOutlined': boolean;
+    'isSelected': boolean;
+    'tabIndex': number;
+    'type': 'button' | 'reset' | 'submit';
+    'view': 'success' | 'danger' | 'primary';
   }
-  interface UiButton {}
 }
 
 declare global {
 
-
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
 
   interface HTMLUiButtonElement extends Components.UiButton, HTMLStencilElement {}
   var HTMLUiButtonElement: {
@@ -42,30 +33,28 @@ declare global {
     new (): HTMLUiButtonElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
     'ui-button': HTMLUiButtonElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface UiButton {
+    'form'?: string;
+    'isBlock'?: boolean;
+    'isDisabled'?: boolean;
+    'isGhost'?: boolean;
+    'isLoading'?: boolean;
+    'isOutlined'?: boolean;
+    'isSelected'?: boolean;
+    'onClicked'?: (event: CustomEvent<any>) => void;
+    'onMouseDown'?: (event: CustomEvent<any>) => void;
+    'onMouseUp'?: (event: CustomEvent<any>) => void;
+    'tabIndex'?: number;
+    'type'?: 'button' | 'reset' | 'submit';
+    'view'?: 'success' | 'danger' | 'primary';
   }
-  interface UiButton {}
 
   interface IntrinsicElements {
-    'my-component': MyComponent;
     'ui-button': UiButton;
   }
 }
@@ -76,7 +65,6 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
-      'my-component': LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
       'ui-button': LocalJSX.UiButton & JSXBase.HTMLAttributes<HTMLUiButtonElement>;
     }
   }
